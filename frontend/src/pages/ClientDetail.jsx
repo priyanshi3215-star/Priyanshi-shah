@@ -10,8 +10,8 @@ import toast from 'react-hot-toast';
 const COLORS = ['#2563EB', '#7C3AED', '#059669', '#D97706', '#DC2626', '#0891B2'];
 const PLATFORMS = ['all', 'meta', 'google', 'linkedin', 'twitter', 'tiktok', 'other'];
 
-const fmt = (n, d = 0) => parseFloat(n || 0).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
-const fmtCur = (n) => `$${fmt(n, 2)}`;
+const fmt = (n, d = 0) => parseFloat(n || 0).toLocaleString('en-IN', { minimumFractionDigits: d, maximumFractionDigits: d });
+const fmtCur = (n) => `₹${fmt(n, 2)}`;
 const fmtPct = (n) => `${fmt(n, 2)}%`;
 
 const Tooltip_ = ({ active, payload, label, prefix = '', suffix = '' }) => {
@@ -533,8 +533,8 @@ setRecommendations(res.data.recommendations);
                     <ResponsiveContainer width="100%" height={220}>
                       <LineChart data={trends}>
                         <XAxis dataKey="month" tick={{ fontSize: 11 }} />
-                        <YAxis tick={{ fontSize: 11 }} tickFormatter={v => `$${(v / 1000).toFixed(0)}k`} />
-                        <Tooltip content={<Tooltip_ prefix="$" />} />
+                        <YAxis tick={{ fontSize: 11 }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}k`} />
+                        <Tooltip content={<Tooltip_ prefix="₹" />} />
                         <Line type="monotone" dataKey="spend" stroke="#2563EB" strokeWidth={2.5} dot={{ fill: '#2563EB', r: 3 }} name="Spend" />
                       </LineChart>
                     </ResponsiveContainer>

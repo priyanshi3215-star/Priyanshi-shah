@@ -4,8 +4,8 @@ import { getDashboardOverview } from '../utils/api';
 import { useAuth } from '../context/AuthContext';
 import { Users, TrendingUp, BarChart3, ArrowRight } from 'lucide-react';
 
-const fmt = (n) => parseFloat(n || 0).toLocaleString('en-US', { maximumFractionDigits: 0 });
-const fmtCur = (n) => `$${parseFloat(n || 0).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+const fmt = (n) => parseFloat(n || 0).toLocaleString('en-IN', { maximumFractionDigits: 0 });
+const fmtCur = (n) => `₹${parseFloat(n || 0).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
 
 export default function Dashboard() {
   const { user } = useAuth();
@@ -66,8 +66,8 @@ export default function Dashboard() {
      >
        {[
          { label: 'CTR', value: `${parseFloat(data?.ctr || 0).toFixed(2)}%` },
-         { label: 'CPC', value: `$${parseFloat(data?.cpc || 0).toFixed(2)}` },
-         { label: 'CPL', value: `$${parseFloat(data?.cpl || 0).toFixed(2)}` },
+         { label: 'CPC', value: `₹${parseFloat(data?.cpc || 0).toFixed(2)}` },
+         { label: 'CPL', value: `₹${parseFloat(data?.cpl || 0).toFixed(2)}` },
          { label: 'Conversion Rate', value: `${parseFloat(data?.conversionRate || 0).toFixed(2)}%` },
          { label: 'ROAS', value: `${parseFloat(data?.roas || 0).toFixed(2)}x` },
        ].map(({ label, value }) => (

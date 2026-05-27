@@ -217,15 +217,15 @@ export default function UploadData() {
                 </div>
                 <div className="grid grid-2">
                   {[
-                    { key: 'spend', label: 'Spend ($)', ph: '1500.00' },
+                    { key: 'spend', label: 'Spend (₹)', ph: '1500.00' },
                     { key: 'impressions', label: 'Impressions', ph: '50000' },
                     { key: 'clicks', label: 'Clicks', ph: '1200' },
                     { key: 'ctr', label: 'CTR (%)', ph: '2.4' },
-                    { key: 'cpc', label: 'CPC ($)', ph: '1.25' },
+                    { key: 'cpc', label: 'CPC (₹)', ph: '1.25' },
                     { key: 'conversions', label: 'Conversions', ph: '85' },
-                    { key: 'cpa', label: 'CPA ($)', ph: '17.65' },
+                    { key: 'cpa', label: 'CPA (₹)', ph: '17.65' },
                     { key: 'roas', label: 'ROAS', ph: '3.2' },
-                    { key: 'revenue', label: 'Revenue ($)', ph: '4800' },
+                    { key: 'revenue', label: 'Revenue (₹)', ph: '4800' },
                   ].map(({ key, label, ph }) => (
                     <div key={key} className="form-group">
                       <label className="form-label">{label}</label>
